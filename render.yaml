@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: api-corregedoria
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn server:app"
+    name: corregedoria-api2
+    env: python
     plan: free
+    buildCommand: "pip install -r requisitos.txt"
+    startCommand: "gunicorn main:app --bind 0.0.0.0:10000"
